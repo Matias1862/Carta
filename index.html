@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💖 Pregunta importante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PANTALLA 1 -->
+<section id="screen1" class="screen active">
+  <h1>¿Me amas? 💘</h1>
+  <div class="buttons">
+    <button id="yesBtn" onclick="goToQuestions()">Sí 💕</button>
+    <button id="noBtn">No 💀</button>
+  </div>
+</section>
+
+<!-- PANTALLA 2 -->
+<section id="screen2" class="screen">
+  <h2>¿En serio? 😳</h2>
+
+  <div class="question">
+    <p>¿Cuál es mi juego favorito?</p>
+    <button onclick="check(1,true)">Geometry Dash</button>
+    <button onclick="check(1,false)">Evade</button>
+    <button onclick="check(1,false)">Adopt Me</button>
+  </div>
+
+  <div class="question hidden" id="q2">
+    <p>¿Cuántos átomos de hidrógeno se necesitan para activar un acelerador de partículas?</p>
+    <button onclick="check(2,false)">1</button>
+    <button onclick="check(2,false)">10</button>
+    <button onclick="check(2,true)">No tengo la menor idea</button>
+  </div>
+
+  <div class="question hidden" id="q3">
+    <p>¿Cuál es mi fecha de cumpleaños?</p>
+    <button onclick="finish(true)">16 de agosto</button>
+    <button onclick="finish(false)">16 de junio</button>
+    <button onclick="finish(false)">32 de diciembre</button>
+  </div>
+</section>
+
+<!-- PANTALLA 3 -->
+<section id="screen3" class="screen">
+  <h1 class="love-title">Aww 🥹💖</h1>
+<h2 class="love-sub">Respondíste todo bien</h2>
+<p class="love-text">
+  Dalila, de verdad gracias por estar, por tu cariño  
+  y por hacer mi mundo más bonito 💕  
+  No es solo una página… eres tú.
+</p>
+</section>
+
+<script src="script.js"></script>
+<div class="hearts"></div>
+</body>
+</html>

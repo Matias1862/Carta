@@ -1,0 +1,132 @@
+:root {
+  --yes-width: 90px;   /* ← AJUSTA TAMAÑOS */
+  --yes-height: 45px;
+  --no-width: 160px;
+  --no-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff4d6d, #ffb3c6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  border: 3px solid black;
+  position: relative;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+.buttons {
+  position: relative;
+  height: 200px;
+}
+
+button {
+  background: white;
+  border: 3px solid black;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 6px;
+  font-size: 16px;
+}
+
+#yesBtn {
+  width: var(--yes-width);
+  height: var(--yes-height);
+}
+
+#noBtn {
+  width: var(--no-width);
+  height: var(--no-height);
+  position: absolute;
+}
+
+.question {
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.screen.active {
+  display: block;
+  animation: fadeSlideIn 0.6s ease;
+}
+
+button {
+  transition: transform 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+.love-title {
+  animation: fadeSlideIn 1s ease;
+}
+
+.love-text {
+  margin-top: 15px;
+  font-size: 16px;
+  animation: fadeSlideIn 1.5s ease;
+}
